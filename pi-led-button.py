@@ -1,21 +1,21 @@
 import RPi.GPIO as GPIO;
 import time;
 
-ledPin = 3;
-btnPin = 5;
+ledPin = 5;
+btnPin = 3;
 
 GPIO.setmode(GPIO.BOARD);
 GPIO.setup(ledPin, GPIO.OUT);
-GPIO.setup(btnPin, GPIO.IN);
+GPIO.setup(btnPin, GPIO.IN, GPIO.PUD_UP);
 
 try:
 	while True:
 		GPIO.output(ledPin, GPIO.HIGH);
-		sleep(0.2);
-		if (not GPIO.input(btnPin)):
+		time.sleep(0.2);
+		if (GPIO.input(btnPin)):
 			GPIO.output(ledPin, GPIO.LOW);
-			sleep(0.2);
+			time.sleep(0.2);
 except KeyboardInterrupt:
 	GPIO.cleanup();
-	print "Goodbye\n";
+	print "\nGoodbye\n";
 
