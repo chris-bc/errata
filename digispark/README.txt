@@ -46,12 +46,6 @@ DigiSpark and Arduino payloads (no conversion needed, just open in Arduino and u
 - https://github.com/topics/badusb
 - https://github.com/JodyWeijers/BadUSB-DigiSpark
 
-Other drivers & boards
-- If you get interested in other dev boards/chips it's a good idea to install drivers for both the CH340 and CP2101 chips at the same time
-  - USB is how computers communicate, UART is how chips communicate
-  - The CH340 and CP210x series of chips translate between the two
-  - It can be VERY hard to figure out what causes "absolutely nothing is happening" issues, installing them both up front will make future Eleni less frustrated.
-
 Where to next?
 If the electronics side of this interests you it's relatively easy to buy a 'naked' chip and build a circuit allowing it to be flashed with Arduino IDE
   - That's easiest to do if you own an Arduino and can 'borrow' its FTDI programmer to do the flashing
@@ -65,10 +59,9 @@ If it's the hacking/security side that interests you, you're probably more inter
   - Software Defined Radio - RTL-SDR
     - A $10 USB dongle can tune your computer in to all the radio communication that happens around us
     - Not *just* radio (although it can do radio, TV, and UHF/CB radio), RTL-SDR has a range from about 20MHz to about 1GHz, some things it can interact with are:
-      - Remote controls - garage doors, toys, drones, doorbells, car keys, etc.
-      - Air traffic control data
+      - Remote controls - garage doors, toys, drones, doorbells, car keys, baby monitors, home weather stations, etc.
+      - GSM, GPS, and ADS-B (flight information)
       - Audio and, occasionally, images from the International Space Station
-      - GSM, GPS, pagers, baby monitors, weather balloons, IoT sensors/stations
     - https://www.rtl-sdr.com/about-rtl-sdr/
 
   - ESP8266 is a basic 2.4GHz WiFi chip. It's insanely popular because it's so capable & cheap, so is well-supported on Arduino and has loads of tutorials & code examples easily-found online.
