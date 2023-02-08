@@ -10,6 +10,6 @@ with open(sys.argv[1]) as file:
     for line in file:
         if len(line.rstrip()) > 0:
             line = line.replace("\"", "\\\"");
-            print("DigiKeyboard.println(\"" + line.rstrip() + "\");");
+            print("DigiKeyboard.println(F(\"" + line.rstrip() + "\"));");
         print("DigiKeyboard.sendKeyStroke(KEY_ENTER);");
 
